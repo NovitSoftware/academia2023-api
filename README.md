@@ -20,6 +20,10 @@ Un cliente del mercado inmobiliario necesita una aplicación para gestionar las 
 - El código fuente del frontend y backend debe tener un repositorio de github propio. El repositorio debe tener visibilidad privada y se debe agregar como colaborador a los profesores y tutores.
 - Para el desarrollo de código fuente se recomienda usar Visual Studio y/o Visual Studio Code
 
+## Diagrama de Producto
+
+<img width="861" alt="asd" src="https://user-images.githubusercontent.com/7192115/210460031-72c879f0-5222-48e3-ad0d-9dadd702e005.png">
+
 ## Entregas
 
 ### Hito 1
