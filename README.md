@@ -28,37 +28,37 @@ Un cliente del mercado inmobiliario necesita una aplicación para gestionar las 
 
 ### Hito 1
 
-**Angular - Fecha entrega: 20-01-2022**
+**Angular - Fecha entrega: 20-01-2023**
 
 Realizar las pantallas para permitir operaciones CRUD de los productos y las operaciones de venta. Los resultados de las operaciones se deben reflejar en la consola del navegador con datos simulados.
 
-**.NET - Fecha entrega: 27-01-2022**
+**.NET - Fecha entrega: 27-01-2023**
 
 Realizar los controladores con los endpoints necesarios para permitir operaciones CRUD de los productos y las operaciones de venta. Los resultados de las operaciones se deben probar desde el swagger. (opcional: verificar que los datos se persisten correctamente en la base de datos)
 
 ### Hito 2 
 
-**Angular - Fecha entrega: 03-02-2022**
+**Angular - Fecha entrega: 03-02-2023**
 
 Conectar el frontend con el backend de forma local. El objetivo es consumir los endpoints desde los servicios de cada pantalla. Para lo cual se debe tener en ejecución ambas aplicaciones en paralelo y se debe configurar la URL de conexión hacia la WebAPI.
 
-**.NET - Fecha entrega: 03-02-2022**
+**.NET - Fecha entrega: 03-02-2023**
 
 Refactorizar la funcionalidad realizada en los controladores/endpoints en repositorios y servicios correspondientes. Para ello se debe estructurar correctamente el proyecto e inyectar las dependencias necesarias. (Nota: eso no debe afectar de ninguna forma la comunicación con el frontend)
 
 ### Hito 3
 
-**Angular - Fecha entrega: 10-02-2022**
+**Angular - Fecha entrega: 10-02-2023**
 
 Mejorar el aspecto visual de las pantallas mediante la aplicación de componentes de Angular Material UI.
 
-**.NET - Fecha entrega: 10-02-2022**
+**.NET - Fecha entrega: 10-02-2023**
 
 Agregar y configurar un middleware que permita loguear los accesos hacia la aplicación de cualquier usuario. Los logueos se deben visualizar por consola.
 
 ### Final
 
-Fecha entrega: 17-02-2022
+Fecha entrega: 17-02-2023
 
 La aplicación debe funcionar correctamente, esto implica que la conexión entre el frontend y backend debe ser transparente para el usuario. El backend debe tener configurado correctamente la base de datos.
 
