@@ -58,7 +58,7 @@ Agregar y configurar un middleware que permita loguear los accesos hacia la apli
 
 ### Final
 
-Fecha entrega: 17-02-2023
+**Fecha entrega: 17-02-2023**
 
 La aplicación debe funcionar correctamente, esto implica que la conexión entre el frontend y backend debe ser transparente para el usuario. El backend debe tener configurado correctamente la base de datos.
 
