@@ -6,11 +6,22 @@ Un cliente del mercado inmobiliario necesita una aplicación para gestionar las 
 
 - La aplicación debe contar un inicio de sesión para todos los usuarios, existen dos tipos de usuarios, con rol vendedor y con rol comercial.
 - En el inicio de sesión el usuario debe ingresar el nombre de usuario y contraseña.
-- Los usuarios con rol vendedor deben poder realizar operaciones CRUD sobre productos y las reservas  sobre dichos productos.
-- De cada producto se desea informar un código (alfanumérico), una dirección, el precio y un enlace a una imagen ilustrativa.
+- Los usuarios con rol vendedor deben poder realizar operaciones CRUD sobre productos y las reservas sobre dichos productos.
+- De cada producto se desea informar un código (alfanumérico), un barrio, el precio y un enlace a una imagen ilustrativa.
+- Los posibles estados de un producto son disponible, reservado y vendido.
+- Cuando se realiza una reserva esta tiene un estado de ingresada, mientras que el estado del producto será reservado
+- Si una reserva se encuentra en estado de ingresada tiene 2 opciones:
+  - Que la reserva pase aprobada, lo cual indica que el producto pasa de de estado reservado a vendido
+  - Que la reserva pase cancelada, lo cual indica que el producto pasa de estado reservado a disponible
 - Cada reserva debe tener asociado el nombre del cliente y el producto. Al momento de crear una reserva se debe tener la opción de solicitar la aprobación (por parte de comercial) o cancelar la reserva.
-- Los usuarios con rol comercial deben poder aprobar y/o rechazar las reservas. 
+- Los posibles estados de una reserva son ingresada, cancelada, aprobada y rechazada.
+- Los usuarios con rol comercial deben poder aprobar y/o rechazar las reservas.
 - Los usuarios con rol comercial deben poder visualizar un reporte (mediante un gráfico a definir) en donde se debe indicar las ventas por cada vendedor.
+- En los siguientes casos las reservas no requieren aprobación alguna (se auto aprueban)
+  - Pertenece al Barrio X y su precio es menor a 100.000
+  - Es el último producto disponible del Barrio X
+- En el caso de que el vendedor tiene hasta 3 reservas ingresadas no se debe permitir realizar una nueva reserva
+
 
 ## Restricciones tecnológicas
 
@@ -22,7 +33,7 @@ Un cliente del mercado inmobiliario necesita una aplicación para gestionar las 
 
 ## Diagrama de Producto
 
-<img width="861" alt="asd" src="https://user-images.githubusercontent.com/7192115/210460031-72c879f0-5222-48e3-ad0d-9dadd702e005.png">
+<img width="848" alt="Screenshot 2023-01-18 123248" src="https://user-images.githubusercontent.com/7192115/213214519-e287edf7-464b-4418-b785-30a75114c49a.png">
 
 ## Entregas
 
