@@ -27,7 +27,7 @@ public class AccountController : ControllerBase
 
     [HttpPost("Register")]
     [Authorize]
-    public ActionResult<User> Register(UserDto request)
+    public ActionResult<User> Register(UserRegisterDto request)
     {
         CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
@@ -35,14 +35,26 @@ public class AccountController : ControllerBase
         {
             Username = request.Username,
             PasswordHash = passwordHash,
-            PasswordSalt = passwordSalt
+            PasswordSalt = passwordSalt,
+            Roles = new List<Role>()
         };
+
+        var role = context.Roles.FirstOrDefault(x => x.Name == request.Role);
+
+        if (role is null)
+        {
+            return BadRequest("Rol inexistente.");
+        }
+
+        user.Roles.Add(role);
 
         context.Users.Add(user);
 
         context.SaveChanges();
 
-        return Ok(user);
+        var userCreated = context.Users.FirstOrDefault(x => x.Id == user.Id);
+
+        return Ok(new { Id = userCreated.Id, Username = userCreated.Username, Role = userCreated.Roles.First().Name });
     }
 
     [HttpPost("Login")]
