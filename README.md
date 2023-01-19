@@ -33,7 +33,7 @@ Un cliente del mercado inmobiliario necesita una aplicación para gestionar las 
 
 ## Diagrama de Producto
 
-<img width="848" alt="Screenshot 2023-01-18 123248" src="https://user-images.githubusercontent.com/7192115/213214519-e287edf7-464b-4418-b785-30a75114c49a.png">
+![Screenshot 2023-01-19 113522](https://user-images.githubusercontent.com/7192115/213470036-13b53cfa-e24c-4e94-a3f2-084723415bec.png)
 
 ## Entregas
 
