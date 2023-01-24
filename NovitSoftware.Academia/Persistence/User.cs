@@ -7,6 +7,7 @@ namespace NovitSoftware.Academia.Persistence
     {
         public User()
         {
+            Reservas = new HashSet<Reserva>();
             Roles = new HashSet<Role>();
         }
 
@@ -15,6 +16,8 @@ namespace NovitSoftware.Academia.Persistence
         public string Username { get; set; } = null!;
         public byte[] PasswordHash { get; set; } = null!;
         public byte[] PasswordSalt { get; set; } = null!;
+
+        public virtual ICollection<Reserva> Reservas { get; set; }
 
         public virtual ICollection<Role> Roles { get; set; }
     }
