@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NovitSoftware.Academia.Persistence;
-using NovitSoftware.Academia.Persistence.Entities;
 using NovitSoftware.Academia.Services.DTOs;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,9 +15,9 @@ namespace NovitSoftware.Academia.Controllers;
 public class AccountController : ControllerBase
 {
     private readonly IConfiguration configuration;
-    private readonly AppDbContext context;
+    private readonly AplicacionDbContext context;
 
-    public AccountController(IConfiguration configuration, AppDbContext context)
+    public AccountController(IConfiguration configuration, AplicacionDbContext context)
     {
         this.configuration = configuration;
         this.context = context;
@@ -26,7 +25,7 @@ public class AccountController : ControllerBase
 
 
     [HttpPost("Register")]
-    [Authorize]
+    [AllowAnonymous]
     public ActionResult<User> Register(UserRegisterDto request)
     {
         CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);

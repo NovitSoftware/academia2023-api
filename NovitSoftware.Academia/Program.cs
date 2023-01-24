@@ -37,17 +37,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-var connectionString = builder.Configuration.GetConnectionString("AcademiaDb");
+var connectionString = builder.Configuration.GetConnectionString("AplicacionDb");
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddScoped<DbContext, AppDbContext>();
+builder.Services.AddDbContext<AplicacionDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddScoped<DbContext, AplicacionDbContext>();
 
-var contextBuilderOptions = new DbContextOptionsBuilder<AppDbContext>();
-contextBuilderOptions.UseSqlServer(connectionString);
-var context = new AppDbContext(contextBuilderOptions.Options);
-context.Database.EnsureCreated();
-
-builder.Services.AddCors(options => options.AddPolicy(name: "NovitSoftware",
+builder.Services.AddCors(options => options.AddPolicy("NovitSoftware",
     policy =>
     {
         policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
