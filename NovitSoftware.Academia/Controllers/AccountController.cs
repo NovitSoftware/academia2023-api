@@ -32,7 +32,9 @@ public class AccountController : ControllerBase
 
         var user = new User()
         {
+            Id = Guid.NewGuid(),
             Username = request.Username,
+            Name = request.Username,
             PasswordHash = passwordHash,
             PasswordSalt = passwordSalt,
             Roles = new List<Role>()
